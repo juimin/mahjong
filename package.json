@@ -1,6 +1,9 @@
 {
   "devDependencies": {
     "@types/jest": "29.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
     "jest": "^29.2.2",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
@@ -8,6 +11,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "dev": "eslint . && tsc"
   }
 }

@@ -5,7 +5,7 @@ class TestScoredHand extends ScoredHand {
     displayName = "Hello";
     faan = 69;
 
-    appliesToPlayerHand(playerHand: PlayerHand): boolean {
+    appliesToPlayerHand(): boolean {
         return true;
     }
 }

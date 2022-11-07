@@ -1,4 +1,3 @@
-import { Tile } from "../lib/tile";
 import { ScoredHand, PlayerHand, ALL_HANDS } from "../lib/hands";
 
 // Main logic for scoring

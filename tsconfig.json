@@ -57,9 +57,9 @@
       // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     },
     "include": [
-      "src/*"
+      "scoring/*"
     ],
     "exclude": [
-      "tests/*"
+      "scoring/tests/*"
     ]
   }

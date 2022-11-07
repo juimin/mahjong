@@ -1,31 +1,36 @@
-import { Tile, TileType } from "./tile";
+import { Tile } from "./tile";
 
-class HandValue {
-    static ZERO: HandValue = new HandValue(0, 0);
 
-    faan: number
-    points: number
+class PlayerHand {
+    tiles: Set<Tile>
+    gang_tiles: Set<Tile>
+    flower_tiles: Set<Tile>
 
-    constructor(faan: number, points: number) {
-        this.faan = faan;
-        this.points = points;
+    constructor(tiles: Set<Tile>, gang_tiles: Set<Tile>, flower_tiles: Set<Tile>) {
+        this.tiles = tiles
+        this.gang_tiles = gang_tiles;
+        this.flower_tiles = flower_tiles;
     }
 }
 
-abstract class Hand {
-    abstract getPointContribution(tiles: Array<Tile>): HandValue;
+abstract class ScoredHand {
+    abstract getFaan(): number;
+    abstract appliesToPlayerHand(playerHand: PlayerHand): boolean;
 }
 
-class NoFlowers extends Hand {
-    static handValue = new HandValue(1, 0);
-    static displayName = "No Flowers"
+class NoFlowers extends ScoredHand {
+    displayName = "No Flowers"
 
-    getPointContribution(tiles: Array<Tile>): HandValue {
-        return !tiles.some((t: Tile) => t.type == TileType.Flower) ? NoFlowers.handValue : HandValue.ZERO
+    getFaan(): number {
+        return 1;
+    }
+
+    appliesToPlayerHand(playerHand: PlayerHand): boolean {
+        return playerHand.flower_tiles.size == 0
     }
 }
 
-const ALL_HANDS: Set<Hand> = new Set([NoFlowers]);
+const ALL_HANDS: Set<ScoredHand> = new Set([new NoFlowers()]);
 
 
-export { Hand, ALL_HANDS };
+export { ScoredHand, PlayerHand, ALL_HANDS };

@@ -1,21 +1,21 @@
 class TileType {
     // Point tiles
-    static Flower = new TileType("hua", 0);
-    static Season = new TileType("tian", 1);
+    static Flower = new TileType('hua', 0)
+    static Season = new TileType('tian', 1)
     // Basic Tiles
-    static Bamboo = new TileType("tiao", 2);
-    static Circle = new TileType("tong", 3);
-    static TenThousand = new TileType("wan", 4);
+    static Bamboo = new TileType('tiao', 2)
+    static Circle = new TileType('tong', 3)
+    static TenThousand = new TileType('wan', 4)
     // Honor Tiles
     // Cardinal Directions
-    static East = new TileType("dong", 5);
-    static South = new TileType("nan", 6);
-    static West = new TileType("xi", 7);
-    static North = new TileType("bei", 8);
+    static East = new TileType('dong', 5)
+    static South = new TileType('nan', 6)
+    static West = new TileType('xi', 7)
+    static North = new TileType('bei', 8)
     // Dragons
-    static RedDragon = new TileType("hong zhong", 9);
-    static GreenDragon = new TileType("fa", 10);
-    static WhiteDragon = new TileType("bai ban", 11);
+    static RedDragon = new TileType('hong zhong', 9)
+    static GreenDragon = new TileType('fa', 10)
+    static WhiteDragon = new TileType('bai ban', 11)
 
     callout: string
     sortPriority: number
@@ -26,10 +26,9 @@ class TileType {
     }
 
     valueOf(): number {
-        return this.sortPriority;
+        return this.sortPriority
     }
 }
-
 
 class Tile {
     type: TileType
@@ -41,9 +40,8 @@ class Tile {
     }
 
     valueOf() {
-        return this.type.valueOf();
+        return this.type.valueOf()
     }
-
 }
 
-export { Tile, TileType };
+export { Tile, TileType }

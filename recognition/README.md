@@ -32,31 +32,31 @@ generalized.
 
 ### Primary Tile Type Classification
 
-- Bamboo
-    - Shape Recognition / Shape Recognition.
-    - Perhaps possible to do some kind of stick figure recognition
-- Circle
-    - Pattern Recognition
-- Ten Thousand
-    - Chinese OCR can probably read this as 1-9 * ten thousand
-- Cardinal Directions
-    - Chinese OCR might be able to read this but it's caligraphy
-- Dragons:
-    - Red
-        - OCR for Red Zhong
-    - Green
-        - OCR for the Fa character
-    - White (blank?)
-        - Shape recognition?
+-   Bamboo
+    -   Shape Recognition / Shape Recognition.
+    -   Perhaps possible to do some kind of stick figure recognition
+-   Circle
+    -   Pattern Recognition
+-   Ten Thousand
+    -   Chinese OCR can probably read this as 1-9 \* ten thousand
+-   Cardinal Directions
+    -   Chinese OCR might be able to read this but it's caligraphy
+-   Dragons:
+    -   Red
+        -   OCR for Red Zhong
+    -   Green
+        -   OCR for the Fa character
+    -   White (blank?)
+        -   Shape recognition?
 
 ### Strech Goal Tile Types
 
-- Flower Tiles
-- Season Tiles
-- Dragon image dragons (require color matching)
-    - Applicable to tiles we don't have so not a primary concern
+-   Flower Tiles
+-   Season Tiles
+-   Dragon image dragons (require color matching)
+    -   Applicable to tiles we don't have so not a primary concern
 
 ### Special Hands
 
-- Recognizing Gang
-    - Shape recognition? This 
+-   Recognizing Gang
+    -   Shape recognition? This

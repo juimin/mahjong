@@ -1,5 +1,4 @@
 import {PlayerHand, ScoredHand} from '../../lib/hands';
-import { Tile } from '../../lib/tile';
 import scoreHand from '../../scoring/scorer';
 
 class TestScoredHand extends ScoredHand {
@@ -15,8 +14,6 @@ describe("Scorer", () => {
     it("should return faan for a hand", () => {
         const faan = scoreHand(
             new PlayerHand(
-                new Set(),
-                new Set(),
                 new Set()
             ),
             new Set(

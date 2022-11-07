@@ -3,10 +3,10 @@ import { Tile } from "./tile";
 
 class PlayerHand {
     tiles: Set<Tile>
-    gang_tiles: Set<Tile>
-    flower_tiles: Set<Tile>
+    gang_tiles: Set<Tile> | undefined
+    flower_tiles: Set<Tile> | undefined
 
-    constructor(tiles: Set<Tile>, gang_tiles: Set<Tile>, flower_tiles: Set<Tile>) {
+    constructor(tiles: Set<Tile>, gang_tiles?: Set<Tile>, flower_tiles?: Set<Tile>) {
         this.tiles = tiles
         this.gang_tiles = gang_tiles;
         this.flower_tiles = flower_tiles;
@@ -32,7 +32,7 @@ class NoFlowers extends ScoredHand {
     faan = 1
 
     appliesToPlayerHand(playerHand: PlayerHand): boolean {
-        return playerHand.flower_tiles.size == 0
+        return playerHand.flower_tiles?.size == 0
     }
 }
 

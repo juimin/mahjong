@@ -14,16 +14,22 @@ class PlayerHand {
 }
 
 abstract class ScoredHand {
-    abstract getFaan(): number;
+    abstract displayName: string;
+    abstract faan: number;
     abstract appliesToPlayerHand(playerHand: PlayerHand): boolean;
+
+    getFaan(): number {
+        return this.faan;
+    }
+
+    getDisplayName(): string {
+        return this.displayName;
+    }
 }
 
 class NoFlowers extends ScoredHand {
     displayName = "No Flowers"
-
-    getFaan(): number {
-        return 1;
-    }
+    faan = 1
 
     appliesToPlayerHand(playerHand: PlayerHand): boolean {
         return playerHand.flower_tiles.size == 0

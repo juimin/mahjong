@@ -2,6 +2,7 @@
 
 Project to make an easy to use mahjong scoring tool.
 
+
 ## Goals
 
 - Application should be usable on mobile

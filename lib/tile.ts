@@ -26,7 +26,7 @@ class TileType {
     }
 
     valueOf(): number {
-        return this.sortPriority
+        return this.sortPriority;
     }
 }
 
@@ -41,7 +41,7 @@ class Tile {
     }
 
     valueOf() {
-        return this.type.valueOf()
+        return this.type.valueOf();
     }
 
 }

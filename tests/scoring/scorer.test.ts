@@ -22,7 +22,7 @@ describe("Scorer", () => {
 
 describe("pointConverter", () => {
     it("should return points for a given faan", () => {
-        let test_cases = [
+        const test_cases = [
             [0, 1],
             [1, 2],
             [2, 4],

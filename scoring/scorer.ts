@@ -1,6 +1,7 @@
 import { ScoredHand, PlayerHand, ALL_HANDS } from "../lib/hands";
 
 function faanToPoints(faan: number): number {
+    // https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules#Point_translation_function do this
     if (faan > 9) {
         return 2 ** 6;
     } else if (faan > 6 && faan < 10) {
@@ -23,7 +24,7 @@ function scoreHand(
         total_faan += sc.appliesToPlayerHand(hand) ? sc.getFaan() : 0;
     });
 
-    return total_faan; // https://en.wikipedia.org/wiki/Hong_Kong_mahjong_scoring_rules#Point_translation_function do this
+    return total_faan;
 }
 
 export { faanToPoints, scoreHand };
